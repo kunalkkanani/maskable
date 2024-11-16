@@ -1,0 +1,59 @@
+{
+    "name": "kunalkanani/maskable",
+    "description": "A package for concealing sensitive data in Laravel models and API responses with customizable masking rules. Mask specific fields, like emails and phone numbers, without altering the original data stored in the database.",
+    "keywords": [
+        "laravel",
+        "maskable",
+        "data hide"
+    ],
+    "homepage": "https://github.com/kunalkanani/maskable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kunal Kanani",
+            "email": "kkunalkanani@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "illuminate/contracts": "^10.0||^11.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.14",
+        "pestphp/pest": "^2.34",
+        "pestphp/pest-plugin-laravel": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "KunalKanani\\Maskable\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "KunalKanani\\Maskable\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "KunalKanani\\Maskable\\MaskableServiceProvider"
+            ],
+            "aliases": {
+                "Maskable": "KunalKanani\\Maskable\\Facades\\Maskable"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

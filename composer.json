@@ -20,9 +20,6 @@
         "illuminate/contracts": "^10.0||^11.0"
     },
     "require-dev": {
-        "laravel/pint": "^1.14",
-        "pestphp/pest": "^2.34",
-        "pestphp/pest-plugin-laravel": "^2.3"
     },
     "autoload": {
         "psr-4": {
@@ -35,8 +32,6 @@
         }
     },
     "scripts": {
-        "test": "vendor/bin/pest",
-        "format": "vendor/bin/pint"
     },
     "config": {
         "sort-packages": true,
@@ -48,10 +43,7 @@
         "laravel": {
             "providers": [
                 "KunalKanani\\Maskable\\MaskableServiceProvider"
-            ],
-            "aliases": {
-                "Maskable": "KunalKanani\\Maskable\\Facades\\Maskable"
-            }
+            ]
         }
     },
     "minimum-stability": "stable",
